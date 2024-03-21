@@ -1,0 +1,21 @@
+
+
+<table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Quantity (kg)</th>
+        <th>Vendor Name</th>
+        <th>Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let quotation of quotations">
+        <td>{{ quotation.productName }}</td>
+        <td>{{ quotation.quantity }}</td>
+        <td>{{ quotation.vendorName }}</td>
+        <td>{{ quotation.specification }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

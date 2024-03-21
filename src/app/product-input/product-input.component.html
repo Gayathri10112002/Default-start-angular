@@ -1,0 +1,41 @@
+<div class="head">
+  <h2 class="entry">Data entry</h2>
+</div>
+<div class="container mt-4 main-form">
+  
+  <div class="row">
+    <div class="col-md-6">
+      <label for="productName" class="form-label text-white">Product Name: </label>
+      <select id="productName" class="form-select" [(ngModel)]="productName" (change)="onProductChange()">
+        <option selected disabled>Select Product</option>
+        <option *ngFor="let option of productOptions" [value]="option">{{ option }}</option>
+        <option value="Other">Other</option>
+      </select>
+      <input *ngIf="showOtherProduct" type="text" id="otherProductName" class="form-control mt-2" placeholder="Enter other product name" [(ngModel)]="otherProductName"><br><br>
+    </div>
+    <div class="col-md-6">
+      <label for="quantity" class="form-label text-white">Quantity (in kg): </label>
+      <input type="text" id="quantity" class="form-control" [(ngModel)]="quantity"> <br><br>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <label for="vendorName" class="form-label text-white">Vendor Name: </label>
+      <select id="vendorName" class="form-select" [(ngModel)]="vendorName" (change)="onVendorChange()">
+        <option selected disabled>Select Vendor</option>
+        <option *ngFor="let option of vendorOptions" [value]="option">{{ option }}</option>
+        <option value="Other">Other</option>
+      </select>
+      <input *ngIf="showOtherVendor" type="text" id="otherVendorName" class="form-control mt-2" placeholder="Enter other vendor name" [(ngModel)]="otherVendorName"><br><br>
+    </div>
+    <div class="col-md-6">
+      <label for="specification" class="form-label text-white">Specification: </label>
+      <textarea id="specification" class="form-control" [(ngModel)]="specification"></textarea> <br><br>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-12 text-center">
+      <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+</div>

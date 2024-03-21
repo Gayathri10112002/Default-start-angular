@@ -1,0 +1,25 @@
+/* quotation.component.css */
+
+.quotation-container {
+    background-color: #f0f7ff; /* Light blue */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .quotation-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .quotation-container th,
+  .quotation-container td {
+    border: 1px solid #ddd; /* Light gray */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .quotation-container th {
+    background-color: #007bff; /* Blue */
+    color: white;
+  }
+  
